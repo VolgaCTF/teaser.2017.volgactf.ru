@@ -1,8 +1,8 @@
 {
-  "name": "VolgaCTFSite",
-  "version": "1.0.2",
-  "description": "Main VolgaCTF Site",
-  "author": "Aleksey Volkov",
+  "name": "teaser.2017.volgactf.ru",
+  "version": "1.0.0",
+  "description": "teaser.2017.volgactf.ru",
+  "author": "Alexander Pyatkin",
   "license": "MIT",
   "scripts": {
     "bower": "bower",
