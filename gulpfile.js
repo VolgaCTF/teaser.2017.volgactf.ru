@@ -13,7 +13,7 @@ var makeOnError = function (module) {
     }
 };
 
-gulp.task('default', ["build-css", "copy-bower", 'concat', "copy-image", "copy-fonts", "copy-html"]);
+gulp.task('default', ['concat', "copy-image", "copy-fonts", "copy-html"]);
 
 gulp.task('copy-bower', function () {
     return gulp.src("bower_components/bootstrap/dist/css/bootstrap.css")
@@ -26,7 +26,7 @@ gulp.task('build-css', function () {
         .pipe(gulp.dest('css'))
 });
 
-gulp.task('concat', function () {
+gulp.task('concat', ['copy-bower', 'build-css'], function () {
     return gulp.src('css/*.css')
         .pipe(concat('style.min.css'))
         .pipe(csso(false))
